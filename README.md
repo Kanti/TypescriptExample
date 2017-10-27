@@ -1,5 +1,7 @@
 #Browser Support:
 
+ES6-Promise polyfill only needed for IE see: https://caniuse.com/#feat=promises
+
 Date 26.01.2017
 
 \>= IE 9 ()Windows 7)

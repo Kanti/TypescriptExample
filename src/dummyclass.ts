@@ -1,13 +1,22 @@
+import * as $ from 'jquery';
+
 export default class DummyClass {
   constructor(protected subject) {
   }
 
   async run() {
-    document.getElementById('A').innerText += this.subject;
+    let $A = $('#A');
+    if ($A.length) {
+      $A.text($A.text() + this.subject);
 
-    const BCD = await import('./test');
+      const {Test} = await import('./test');
 
-    let x = new BCD.Test(' World ');
-    x.run();
+      let test = new Test(' World ');
+      $A.click(async () => {
+        $A.off( 'click' );
+        await test.run();
+      });
+
+    }
   }
 }
