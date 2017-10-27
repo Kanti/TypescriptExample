@@ -1,8 +1,10 @@
 const path = require('path');
+const webpack = require("webpack");
+
 
 module.exports = {
   entry : './src/index.ts',
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -19,5 +21,11 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: 'dist/'
-  }
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      minimize: true
+    })
+  ]
 };
