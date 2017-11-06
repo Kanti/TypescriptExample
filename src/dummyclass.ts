@@ -1,10 +1,10 @@
 import * as $ from 'jquery';
 
 export default class DummyClass {
-  constructor(protected subject) {
+  constructor(protected subject: string) {
   }
 
-  async run() {
+  async run(): Promise<void> {
     let $A = $('#A');
     if ($A.length) {
       $A.text($A.text() + this.subject);
@@ -13,7 +13,7 @@ export default class DummyClass {
 
       let test = new Test(' World ');
       $A.click(async () => {
-        $A.off( 'click' );
+        $A.off('click');
         await test.run();
       });
 

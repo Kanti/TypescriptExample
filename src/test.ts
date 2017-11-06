@@ -1,10 +1,10 @@
 import * as $ from 'jquery';
 
 export class Test {
-  constructor(protected subject) {
+  constructor(protected subject: string) {
   }
 
-  async run() {
+  run(): void {
     let $A = $('#A');
     $A.text($A.text() + this.subject);
   }

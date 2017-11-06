@@ -9,6 +9,16 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
+        enforce: 'pre',
+        loader: 'tslint-loader',
+        options: {
+          configFile: path.resolve(__dirname, 'node_modules/airbnb-style/linters/tslint.json'),
+          formatter: 'codeFrame',
+          typeCheck: true
+        }
+      },
+      {
+        test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/
       }

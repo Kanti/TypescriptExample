@@ -1,0 +1,2 @@
+webpackJsonp([0],{5:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),n.d(e,"Test",function(){return r});var u=n(0),r=(n.n(u),function(){function t(t){this.subject=t}return t.prototype.run=function(){var t=u("#A");t.text(t.text()+this.subject)},t}())}});
+//# sourceMappingURL=0.bundle.js.map

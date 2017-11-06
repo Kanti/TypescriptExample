@@ -9,8 +9,11 @@
   "devDependencies": {
     "@types/datatables.net": "^1.10.7",
     "@types/jquery": "^3.2.15",
+    "airbnb-style": "git+https://github.com/matuz/typescript.git#patch-1",
     "ts-loader": "^3.1.0",
-    "typescript": "^2.5.3",
+    "tslint": "^5.8.0",
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.6.1",
     "webpack": "^3.8.1"
   }
 }
