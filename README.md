@@ -1,4 +1,4 @@
-#Browser Support:
+# Browser Support:
 
 ES6-Promise polyfill only needed for IE see: https://caniuse.com/#feat=promises
 
